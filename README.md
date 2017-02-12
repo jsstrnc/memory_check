@@ -1,5 +1,4 @@
 #!/bin/bash
-
 memory=$( free | grep Mem: | awk ' { printf "%.0f\t", $3/$2*100 }' )
 while getopts ":c::w::e:" arg; do
 case $arg in
